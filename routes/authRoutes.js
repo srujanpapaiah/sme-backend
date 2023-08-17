@@ -8,10 +8,11 @@ const authRouter = express.Router();
 authRouter.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: "http://127.0.0.1:5174",
   })
 );
 
 authRouter.get("/", authController);
+authRouter.post("/register", registerUser);
 
 module.exports = authRouter;
