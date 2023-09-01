@@ -1,6 +1,6 @@
 const express = require("express");
 const {
-  get,
+  getData,
   postData,
   getAll,
   getUserByName,
@@ -12,7 +12,7 @@ const {
 const emailRouter = express.Router();
 
 emailRouter
-  .get("/email", get)
+  .get("/email", getData)
   .post("/email", postData)
   .get("/email/getAll", getAll)
   .get("/email/getAll/:name", getUserByName)

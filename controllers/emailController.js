@@ -1,6 +1,6 @@
 const Email = require("../models/emailSchema");
 
-const get = (req, res) => {
+const getData = (req, res) => {
   res.send("This Email Support Route");
 };
 
@@ -173,7 +173,7 @@ const deleteAll = async (req, res) => {
 };
 
 module.exports = {
-  get,
+  getData,
   postData,
   getAll,
   getUserByName,
