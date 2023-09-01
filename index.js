@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const authRouter = require("./routes/authRoutes");
+const emailRouter = require("./routes/emailRouter");
 const { mongoose } = require("mongoose");
 const app = express();
 const cookieParser = require("cookie-parser");
@@ -17,6 +18,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/", authRouter);
+app.use("/email", authRouter, emailRouter);
 
 const port = 8080;
-app.listen(port, () => console.log(`Serve is running on port ${port}`));
+app.listen(port, () => console.log(`Server is running on port ${port}`));
