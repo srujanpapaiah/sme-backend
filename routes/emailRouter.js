@@ -15,7 +15,7 @@ const emailRouter = express.Router();
 emailRouter.use(
   cors({
     credentials: true,
-    origin: "https://sme-frontend.vercel.app",
+    origin: "https://mail.google.com",
   })
 );
 
