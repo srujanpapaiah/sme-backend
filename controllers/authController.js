@@ -67,7 +67,7 @@ const loginController = async (req, res) => {
             .cookie("token", token, {
               expires: new Date(Date.now() + 25892000000),
               httpOnly: true,
-              secure: true,
+              // secure: true,
             })
             .header("Access-Control-Allow-Credentials", "true")
             .json(user);
