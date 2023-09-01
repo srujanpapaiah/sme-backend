@@ -69,6 +69,7 @@ const loginController = async (req, res) => {
               httpOnly: true,
               // secure: true,
             })
+            .setHeader("Authorization", `Bearer ${token}`)
             .header("Access-Control-Allow-Credentials", "true")
             .json(user);
         }
