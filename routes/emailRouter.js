@@ -12,12 +12,12 @@ const {
 const emailRouter = express.Router();
 
 emailRouter
-  .get("/email", getData)
-  .post("/email", postData)
-  .get("/email/getAll", getAll)
-  .get("/email/getAll/:name", getUserByName)
-  .get("/email/delete/:id", deleteById)
-  .get("/email/delete/:name", deleteByName)
-  .get("/email/deleteAll", deleteAll);
+  .get("/", getData)
+  .post("/", postData)
+  .get("/getAll", getAll)
+  .get("/getAll/:name", getUserByName)
+  .get("/delete/:id", deleteById)
+  .get("/delete/:name", deleteByName)
+  .get("/deleteAll", deleteAll);
 
 module.exports = emailRouter;
