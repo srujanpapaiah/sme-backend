@@ -15,13 +15,14 @@ mongoose
 
 // middleware
 app.use(express.json());
-app.use(cookieParser());
 app.use(
   cors({
     origin: ["https://mail.google.com", "https://sme-frontend.vercel.app"],
     credentials: true,
   })
 );
+app.use(cookieParser());
+
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/", authRouter);
