@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 const {
   get,
   postData,
@@ -11,13 +10,6 @@ const {
 } = require("../controllers/emailController");
 
 const emailRouter = express.Router();
-
-emailRouter.use(
-  cors({
-    credentials: true,
-    origin: "https://mail.google.com",
-  })
-);
 
 emailRouter
   .get("/email", get)
