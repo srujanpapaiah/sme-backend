@@ -60,11 +60,14 @@ const loginController = async (req, res) => {
       jwt.sign(
         { email: user.email, id: user._id, name: user.name },
         process.env.JWT_SECRET,
-        { expiresIn: "7d" },
+        {},
         (err, token) => {
           if (err) throw err;
           res
-            .cookie("token", token)
+            .cookie("token", token, {
+              expires: new Date(Date.now() + 25892000000),
+              httpOnly: true,
+            })
             .header("Access-Control-Allow-Credentials", "true")
             .json(user);
         }
