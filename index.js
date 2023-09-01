@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/", authRouter);
-app.use("/email", authRouter, emailRouter);
+app.use("/email", emailRouter);
 
 const port = 8080;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
