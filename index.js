@@ -22,7 +22,7 @@ app.use(
     origin: [
       "https://mail.google.com",
       "https://sme-frontend.vercel.app",
-      "http://127.0.0.1:5173/",
+      "http://127.0.0.1:5173",
     ],
     allowedHeaders: "Content-Type,Authorization",
     credentials: true,
