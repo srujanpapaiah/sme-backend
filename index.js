@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv").config();
 const authRouter = require("./routes/authRoutes");
 const emailRouter = require("./routes/emailRouter");
-const { mongoose } = require("mongoose");
+const mongoose = require("mongoose");
 const app = express();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -24,7 +24,7 @@ app.use(
       "https://pwskills.vercel.app",
       "http://127.0.0.1:5173",
     ],
-    allowedHeaders: "Content-Type,Authorization",
+    allowedHeaders: "Content-Type, Authorization", // Corrected headers
     credentials: true,
   })
 );
