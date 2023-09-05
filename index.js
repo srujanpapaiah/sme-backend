@@ -24,7 +24,7 @@ app.use(
       "https://pwskills.vercel.app",
       "http://127.0.0.1:5173",
     ],
-    allowedHeaders: "Content-Type, Authorization", // Corrected headers
+    allowedHeaders: "Content-Type, Authorization, Access-Control-Allow-Origin",
     credentials: true,
   })
 );
