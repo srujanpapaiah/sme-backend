@@ -23,6 +23,8 @@ app.use(
       "https://mail.google.com",
       "https://pwskills.vercel.app",
       "http://127.0.0.1:5173",
+      "http://localhost:3000",
+      "http://localhost:5174",
     ],
     allowedHeaders: "Content-Type, Authorization, Access-Control-Allow-Origin",
     credentials: true,
