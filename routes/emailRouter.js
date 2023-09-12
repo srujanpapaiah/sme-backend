@@ -16,7 +16,7 @@ emailRouter
   .post("/", postData)
   .get("/getAll", getAll)
   .get("/getAll/:name", getUserByName)
-  .get("/delete/:id", deleteById)
+  .delete("/delete/:id", deleteById)
   .get("/delete/:name", deleteByName)
   .get("/deleteAll", deleteAll);
 
