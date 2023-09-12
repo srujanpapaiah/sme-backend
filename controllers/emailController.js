@@ -138,6 +138,7 @@ const deleteById = async (req, res) => {
   try {
     const { id } = req.params;
     const data = await Email.findByIdAndDelete(id);
+    console.log(data);
     return res.json({
       message: "Deleted Successfully, Email: " + data?.email,
     });
